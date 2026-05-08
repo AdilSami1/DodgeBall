@@ -4,6 +4,17 @@ An autonomous 2D simulation built with Java 22 and Processing 4. The program sim
 <img width="413" height="304" alt="Dodgeball-sim-gif-24" src="https://github.com/user-attachments/assets/f7c024b4-dfce-453e-901e-ccd91b31e106" />
 </p>
 
+## 🔵 Simulation Logic 🔴
+#### **Match Rules**
+  - **Teams:** 2 Teams of 5 starting with 3 balls each
+  - **Elimination:** After getting **hit** by a ball, a player turns **grey** and moves to the sidelines
+  - **Revival:** Upon **catching** a ball a player turns **green** and one sidelined teammate is **revived** into play
+#### **Player Behaviour**
+- **Movement:** Players move in random directions, bouncing off of borders
+- **Searching:** If not holding a ball, players will search for balls within their **sight radius** (starts at 5x the player's radius, increasing as the game goes on)
+- **Throwing:** Players will hold a ball for a set period, then will throw it at the position of a randomly select a player from the opposing team
+  - If hit while holding a ball, the player will throw the held ball before moving to the sideline
+
 ## 🚀 Try it out!
 **Prerequisites:** 
 - Java Runtime Environment (JRE) 22 or later.
@@ -18,17 +29,6 @@ An autonomous 2D simulation built with Java 22 and Processing 4. The program sim
 To build the jar file yourself:
 1. Clone the repository: ```git clone https://github.com/AdilSami1/DodgeBall.git```
 2. Build the jar file: ```mvn clean package```
-
-## 🔵 Simulation Logic 🔴
-#### **Match Rules**
-  - **Teams:** 2 Teams of 5 starting with 3 balls each
-  - **Elimination:** After getting **hit** by a ball, a player turns **grey** and moves to the sidelines
-  - **Revival:** Upon **catching** a ball a player turns **green** and one sidelined teammate is **revived** into play
-#### **Player Behaviour**
-- **Movement:** Players move in random directions, bouncing off of borders
-- **Searching:** If not holding a ball, players will search for balls within their **sight radius** (starts at 5x the player's radius, increasing as the game goes on)
-- **Throwing:** Players will hold a ball for a set period, then will throw it at the position of a randomly select a player from the opposing team
-  - If hit while holding a ball, the player will throw the held ball before moving to the sideline
 
 ## 🪲 Known Issues
 - Players may fail to redirect themselves upon coliding with a border, resulting in them going offscreen
