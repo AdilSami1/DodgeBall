@@ -31,6 +31,5 @@ To build the jar file yourself:
 2. Build the jar file: ```mvn clean package```
 
 ## 🪲 Known Issues
-- Players may fail to redirect themselves upon coliding with a border, resulting in them going offscreen
-- Players may get stuck on a border
+- Players may fail to redirect themselves upon colliding with a border, resulting in them going offscreen or getting stuck on the border
 - Balls may get stuck on a border and become inaccessable to players
